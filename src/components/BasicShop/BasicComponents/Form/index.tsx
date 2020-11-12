@@ -16,13 +16,16 @@ const FormComponent = (props: IFormConfig & { isTpl: boolean }) => {
     api,
     formControls,
   } = props;
+
   const formData: Record<string, any> = {};
+
   const handleChange = useCallback(
     (item, v) => {
       formData[item.label] = v;
     },
     [formData],
   );
+
   const handleSubmit = () => {
     if (api) {
       fetch(api, {
@@ -36,6 +39,7 @@ const FormComponent = (props: IFormConfig & { isTpl: boolean }) => {
       });
     }
   };
+
   return (
     <>
       {props.isTpl && (

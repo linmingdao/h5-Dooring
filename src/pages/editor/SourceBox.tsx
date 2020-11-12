@@ -34,6 +34,8 @@ const SourceBox = memo((props: SourceBoxProps) => {
   let pointData = pstate ? pstate.pointData : [];
   const cpointData = cstate ? cstate.pointData : [];
 
+  console.log(pointData);
+
   const [canvasRect, setCanvasRect] = useState<number[]>([]);
   const [isShowTip, setIsShowTip] = useState(true);
   const [clonePointData, setPointData] = useState(pointData);
