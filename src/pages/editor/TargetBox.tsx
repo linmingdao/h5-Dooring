@@ -21,6 +21,7 @@ const TargetBox = memo((props: TargetBoxProps) => {
       return schemaPc;
     }
   }, [context.theme]);
+
   const [{ isDragging }, drag] = useDrag({
     item: {
       type: item.type,
@@ -43,6 +44,7 @@ const TargetBox = memo((props: TargetBoxProps) => {
     }),
     [isDragging],
   );
+
   return (
     <>
       <div className={styles.listWrap}>

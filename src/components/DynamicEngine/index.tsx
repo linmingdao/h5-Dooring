@@ -49,6 +49,7 @@ type DynamicType = {
   componentsType: componentsType;
   category: string;
 };
+
 const DynamicEngine = memo((props: DynamicType) => {
   const { type, config, category } = props;
   const context = useContext(dooringContext);
