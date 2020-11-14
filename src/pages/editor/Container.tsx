@@ -217,6 +217,7 @@ const Container = (props: {
 
   const [dragstate, setDragState] = useState({ x: 0, y: 0 });
 
+  // 控件的属性设置面板
   const ref = useRef<HTMLDivElement>(null);
   const renderRight = useMemo(() => {
     if (context.theme === 'h5') {
